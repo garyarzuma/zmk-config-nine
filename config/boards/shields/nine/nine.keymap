@@ -61,12 +61,12 @@
             timeout-ms = <10>;
             key-positions = <10 11 12 13>;
             bindings = <&kp RET>;
-        }
+        };
         combo_esc {
             timeout-ms = <10>;
             key-positions = <6 7 8 9>;
             bindings = <&kp ESC>;
-        }
+        };
     };
 
     behaviors {
