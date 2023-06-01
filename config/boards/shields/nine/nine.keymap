@@ -33,6 +33,7 @@
             timeout-ms = <30>;
             key-positions = <3 4 5>;
             bindings = <&to SYS>;
+            layers = <AL1>;
         };
         combo_caps {
             timeout-ms = <30>;
@@ -44,6 +45,7 @@
             timeout-ms = <30>;
             key-positions = <0 1 2>;
             bindings = <&to NUM>;
+            layers = <AL1>;
         };
         combo_bt  {
             timeout-ms = <10>;
@@ -59,12 +61,12 @@
         };
         combo_enter {
             timeout-ms = <10>;
-            key-positions = <10 11 12 13>;
+            key-positions = <3 10>;
             bindings = <&kp RET>;
         };
         combo_esc {
             timeout-ms = <10>;
-            key-positions = <6 7 8 9>;
+            key-positions = <0 7>;
             bindings = <&kp ESC>;
         };
     };
@@ -74,27 +76,27 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_L";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
+            hold-trigger-key-positions = <3 4 5 10 11 12 13 15 16 17>; // right hand
         };
         hm_r: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_R";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <0 1 2 6 7 8 9>; // left hand
+        hold-trigger-key-positions = <0 1 2 6 7 8 9 14 15 16 17>; // left hand
         };
         sr: shift_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_LAYER";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&to>;
@@ -104,28 +106,28 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_LAYERS_L";
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <250>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
-        hold-trigger-key-positions = <3 4 5 10 11 12 13 14>; // right hand
+        hold-trigger-key-positions = <3 4 5 10 11 12 13 15 16 17>; // right hand
         };
         hl_r: homerow_layers_right {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_LAYERS_R";
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <250>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
-        hold-trigger-key-positions = <0 1 2 6 7 8 9>; // left hand
+        hold-trigger-key-positions = <0 1 2 6 7 8 9 14 15 16 17>; // left hand
         };
     td: tapdance {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
             #binding-cells = <2>;
             tapping-term-ms = <190>;
-            quick-tap-ms = <250>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -139,7 +141,7 @@
                 alpha1 {
                 label = "Base";
         bindings = <
-                            &hm_l LCTL L    &hm_l LALT G    &hm_l LGUI D                &hm_r RGUI H    &hm_r LALT U        &hm_r RCTL O
+                            &hm_l LCTL L    &hm_l LALT G    &hm_l LGUI D                &hm_r LGUI H    &hm_r LALT U        &hm_r RCTL O
             &hl_l NUM I     &hl_l SM2 S     &hl_l SM1 R     &hl_l SYS T                 &hl_r SYS N     &hl_r SM1 E         &hl_r SM2 A     &hl_r NUM C
                                              &kp SPC        &sk LSHIFT                  &td LC(LS(LALT)) COMMA  &mo AL2
         >;
@@ -166,7 +168,7 @@
         bindings = <
                     &kp ATSN    &kp QMARK        &kp RA(N3)                &kp LPRN    &kp RPRN    &kp MINUS
         &kp SEMI    &kp PRCNT   &kp EXCL         &kp LS(MINUS)             &kp LBRC    &kp RBRC    &kp AMPS    &kp COLON
-                                &trans          &sr LSHIFT AL1             &kp RALT    &kp RGUI
+                                &trans           &sr LSHIFT AL1            &kp RALT    &kp RGUI
 
         >;
         };
@@ -183,9 +185,9 @@
         sys {
         label = "Nav";
         bindings = <
-                            &kp ESC        &kp LG(LS(LBKT))    &kp LG(LS(RBKT))         &td LG(V) LG(C)     &td PG_UP UP    &kp BKSP
-        &td LG(GRAVE) TAB   &kp DEL        &td HOME LG(LBKT)   &td END LG(RBKT)         &kp LEFT            &td PG_DN DOWN  &kp RIGHT   &kp RET
-                                           &kp LCTL            &sr LSHIFT AL1           &kp RALT            &kp RGUI
+                            &kp ESC        &td LC(LS(TAB)) LC(TAB)   &td LC(LS(Z)) LC(Z)         &td LC(V) LC(C)     &td PG_UP UP    &kp BKS
+        &td LC(GRAVE) TAB   &kp DEL        &td HOME LA(LEFT)         &td END LA(RIGHT)           &kp LEFT            &td PG_DN DOWN  &kp RIGHT   &kp RET
+                                           &kp LCTL                  &sr LSHIFT AL1              &kp RALT            &kp RGUI
         >;
         };
 
@@ -193,8 +195,8 @@
         label = "BT";
         bindings = <
                   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2           &bt BT_SEL 3     &bt BT_SEL 4   &trans
-        &trans    &sys_reset          &trans        &bootloader            &bootloader      &trans         &sys_reset  &bt BT_CLR
-                                  &none         &to AL1                &none     &none
+        &trans    &sys_reset      &trans        &bootloader            &bootloader      &trans         &sys_reset  &bt BT_CLR
+                                  &none         &to AL1                &none            &none
         >;
         };
         fun {
