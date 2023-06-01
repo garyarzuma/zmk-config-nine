@@ -186,7 +186,7 @@
         label = "Nav";
         bindings = <
                             &kp ESC        &kp LC(TAB)               &kp LC(Z)                   &td LC(V) LC(C)     &td PG_UP UP    &kp BKS
-        &td LC(GRAVE) TAB   &kp DEL        &td HOME LA(LEFT)         &td END LA(RIGHT)           &kp LEFT            &td PG_DN DOWN  &kp RIGHT   &kp RET
+        &td LC(GRAVE) TAB   &kp DEL        &td HOME                  &td END                     &kp LEFT            &td PG_DN DOWN  &kp RIGHT   &kp RET
                                            &kp LCTL                  &sr LSHIFT AL1              &kp RALT            &kp RGUI
         >;
         };
