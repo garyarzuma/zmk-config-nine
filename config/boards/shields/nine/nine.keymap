@@ -77,7 +77,7 @@
             label = "HOMEROW_MODS_L";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <190>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <3 4 5 10 11 12 13 15 16 17>; // right hand
@@ -87,7 +87,7 @@
             label = "HOMEROW_MODS_R";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <190>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <0 1 2 6 7 8 9 14 15 16 17>; // left hand
@@ -107,7 +107,7 @@
             label = "HOMEROW_LAYERS_L";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <190>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         hold-trigger-key-positions = <3 4 5 10 11 12 13 15 16 17>; // right hand
@@ -117,7 +117,7 @@
             label = "HOMEROW_LAYERS_R";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <190>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         hold-trigger-key-positions = <0 1 2 6 7 8 9 14 15 16 17>; // left hand
@@ -127,7 +127,7 @@
             label = "TAPDANCE";
             #binding-cells = <2>;
             tapping-term-ms = <190>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <190>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
