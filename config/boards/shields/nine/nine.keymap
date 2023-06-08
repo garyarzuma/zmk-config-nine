@@ -143,7 +143,7 @@
         bindings = <
                             &hm_l LCTL L    &hm_l LALT G    &hm_l LGUI D                &hm_r LGUI H    &hm_r LALT U        &hm_r RCTL O
             &hl_l NUM I     &hl_l SM2 S     &hl_l SM1 R     &hl_l SYS T                 &hl_r SYS N     &hl_r SM1 E         &hl_r SM2 A     &hl_r NUM C
-                                             &kp SPC        &sk LSHIFT                  &td LC(LS(LALT)) COMMA  &mo AL2
+                                             &kp SPC        &sk LSHIFT                  &td LGUI COMMA  &mo AL2
         >;
         };
                 alpha2 {
